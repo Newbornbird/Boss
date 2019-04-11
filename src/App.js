@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import makeRouteConfig from 'found/lib/makeRouteConfig';
+import Route from 'found/lib/Route';
+import { createBrowserRouter } from 'found';
+import Header from './components/Header';
+import MainPage from './pages/MainPage';
+import styles from './main.css';
+
 
 class App extends Component {
   render() {
+    let {children} = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Header/>
+        {children}
       </div>
     );
   }
 }
+
+export let BrowserRouter = createBrowserRouter({
+  routeConfig: makeRouteConfig(
+    <Route path="/" Component={App}>
+      <Route Component={MainPage} />
+    </Route>
+  )
+})
 
 export default App;
