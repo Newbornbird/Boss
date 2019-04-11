@@ -63,7 +63,11 @@
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "eslint-config-purrweb-react",
+    "rules": {
+      "class-methods-use-this": "off",
+      "import/prefer-default-export": "off"
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -119,6 +123,13 @@
   "babel": {
     "presets": [
       "react-app"
-    ]
+    ],
+    "plugins": ["@babel/plugin-proposal-export-default-from"]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-purrweb-react": "^1.0.8",
+    "eslint-plugin-prettier": "^3.0.1"
   }
 }
