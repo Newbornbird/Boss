@@ -7,7 +7,9 @@ class Main extends Component {
     const { children } = this.props;
     return (
       <body className="boss-body">
-        <Header />
+        <header className="boss-page-header">
+          <Header />
+        </header>
         <main className="boss-page-main">{children}</main>
       </body>
     );

@@ -1,19 +1,16 @@
 import React from 'react';
 import makeRouteConfig from 'found/lib/makeRouteConfig';
 import Route from 'found/lib/Route';
+import Redirect from 'found/lib/Redirect';
 import { createBrowserRouter } from 'found';
 import { Main } from './layouts';
-import { StaffMembersPage } from './pages';
+import { StaffMembersPage, StaffMemberProfile } from './pages';
 // import MainPage from './pages/MainPage';
 
 export default createBrowserRouter({
   routeConfig: makeRouteConfig(
-    // <Route path="/" Component={App}>
-    //   <Route Component={MainPage} />
-    // </Route>,
-    <Route Component={Main}>
+    <Route path="/" Component={Main}>
       <Route
-        path="/"
         getData={() => {
           return new Promise(resolve => {
             setTimeout(() => {
@@ -23,6 +20,8 @@ export default createBrowserRouter({
         }}
         Component={StaffMembersPage}
       />
+      <Redirect from="/:id" to="/:id/profile" />
+      <Route path="/:id/profile" Component={StaffMemberProfile} />
     </Route>,
   ),
 });

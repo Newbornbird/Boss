@@ -73,7 +73,7 @@ class Row extends Component {
             <p className="boss-table__label">Work Venues</p>
             <p className="boss-table__text">
               <a href="#" className="boss-table__link">
-                Black, McCooley's
+                {"Black, McCooley's"}
               </a>
             </p>
           </div>
