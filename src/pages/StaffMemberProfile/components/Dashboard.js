@@ -56,9 +56,9 @@ class Dashboard extends Component {
                 <a href="#" className="boss-button boss-button_role_edit boss-page-dashboard__button">
                   Edit Profile
                 </a>
-                <a href="#" className="boss-button boss-button_role_block boss-page-dashboard__button">
+                {/* <a href="#" className="boss-button boss-button_role_block boss-page-dashboard__button">
                   Disable Staff Member
-                </a>
+                </a> */}
               </div>
             </div>
 
