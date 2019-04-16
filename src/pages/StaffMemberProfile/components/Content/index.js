@@ -83,7 +83,11 @@ class Content extends Component {
               </DetailsItem>
             </Details>
             <Details number="6" title="Revisions History">
-              <button className="boss-button boss-button_role_view-history boss-button_type_small">View History</button>
+              <li className="boss-details__item">
+                <button className="boss-button boss-button_role_view-history boss-button_type_small">
+                  View History
+                </button>
+              </li>
             </Details>
           </div>
         </div>
