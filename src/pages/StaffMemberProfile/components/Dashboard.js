@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'found';
 
 class Dashboard extends Component {
   render() {
@@ -53,12 +54,12 @@ class Dashboard extends Component {
                 </div>
               </div>
               <div className="boss-page-dashboard__buttons-group">
-                <a href="#" className="boss-button boss-button_role_edit boss-page-dashboard__button">
+                <Link
+                  to={`${window.location.pathname}/edit`}
+                  className="boss-button boss-button_role_edit boss-page-dashboard__button"
+                >
                   Edit Profile
-                </a>
-                {/* <a href="#" className="boss-button boss-button_role_block boss-page-dashboard__button">
-                  Disable Staff Member
-                </a> */}
+                </Link>
               </div>
             </div>
 
