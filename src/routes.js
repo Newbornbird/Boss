@@ -14,8 +14,8 @@ export default createBrowserRouter({
       <Route Component={StaffMembersPage} />
       <Redirect from="/:id" to="/:id/profile" />
       <Route path="/:id/profile" Component={StaffMemberProfile} />
-      <Redirect from="/:id/profile/edit" to="/:id/profile/edit/employment" />
-      <Route path="/:id/profile/edit" Component={EditProfile}>
+      <Redirect from="/:id/edit" to="/:id/edit/employment" />
+      <Route path="/:id/edit" Component={EditProfile}>
         <Route path="employment" Component={EmploymentDetails} />
         <Route path="personal" Component={PersonalDetails} />
         <Route path="contact" Component={ContactDetails} />

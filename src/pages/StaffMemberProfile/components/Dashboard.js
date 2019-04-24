@@ -3,6 +3,8 @@ import { Link } from 'found';
 
 class Dashboard extends Component {
   render() {
+    const { id } = this.props;
+    console.log(id);
     return (
       <div className="boss-page-main__dashboard">
         <div className="boss-page-main__inner">
@@ -54,10 +56,7 @@ class Dashboard extends Component {
                 </div>
               </div>
               <div className="boss-page-dashboard__buttons-group">
-                <Link
-                  to={`${window.location.pathname}/edit`}
-                  className="boss-button boss-button_role_edit boss-page-dashboard__button"
-                >
+                <Link to={`/${id}/edit`} className="boss-button boss-button_role_edit boss-page-dashboard__button">
                   Edit Profile
                 </Link>
               </div>

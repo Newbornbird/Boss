@@ -39,7 +39,17 @@ class Content extends Component {
                   </Link>
                 </nav>
               </aside>
-              <section className="boss-content-switcher__chapters">{children}</section>
+              <section className="boss-content-switcher__chapters">
+                <article
+                  className="boss-content-switcher__chapter boss-content-switcher__chapter_state_visible"
+                  data-chapter="contact"
+                >
+                  <header className="boss-content-switcher__header">
+                    <h2 className="boss-content-switcher__title">Contact Details</h2>
+                  </header>
+                  <div className="boss-content-switcher__content">{children}</div>
+                </article>
+              </section>
             </div>
           </div>
           {/* <!-- Content switcher end --> */}
