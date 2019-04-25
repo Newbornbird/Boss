@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'found';
+import PropTypes from 'prop-types';
 
 class Dashboard extends Component {
   render() {
     const { id } = this.props;
-    console.log(id);
     return (
       <div className="boss-page-main__dashboard">
         <div className="boss-page-main__inner">
@@ -106,5 +106,11 @@ class Dashboard extends Component {
     );
   }
 }
+
+Dashboard.propTypes = {
+  params: PropTypes.object,
+  id: PropTypes.string,
+  children: PropTypes.object,
+};
 
 export default Dashboard;
