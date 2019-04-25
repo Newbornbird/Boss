@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 class Dashboard extends Component {
   render() {
     const { id } = this.props;
-    console.log('WTF');
-    console.log('red');
     return (
       <div className="boss-page-main__dashboard">
         <div className="boss-page-main__inner">
